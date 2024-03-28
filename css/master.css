@@ -247,6 +247,11 @@ ul {
   -o-border-radius: 50%;
 }
 
+.floating-button .icon {
+  animation: spin 4s linear infinite;
+  -webkit-animation: spin 2.5s ease-in-out infinite;
+}
+
 .floating-widget {
   display: none;
   position: fixed;
@@ -456,6 +461,7 @@ ul {
   background-size: cover;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
 .landing .container {
@@ -540,7 +546,8 @@ ul {
 .about-section {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  color: #111111
+  color: #111111;
+  overflow: hidden;
 }
 
 .about-section .container {
@@ -652,14 +659,6 @@ ul {
   position: relative;
   overflow: hidden;
   text-align: center;
-}
-
-@media (max-width: 767px) {
-  .services-section .svg-spin {
-    max-width: 280px;
-    left: -110px;
-    top: -120px;
-  }
 }
 
 
@@ -805,7 +804,7 @@ ul {
 .title-section {
   color: white;
   height: 600px;
-  background-image: url(/imgs/section\ background.jpg);
+  background-image: url(../imgs/section\ background.jpg);
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -818,6 +817,7 @@ ul {
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
+  
 }
 
 .title-section .overlay-image {
@@ -928,6 +928,7 @@ ul {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   color: #111111;
+  overflow: hidden;
 }
 
 .why-section .container {
@@ -978,7 +979,7 @@ ul {
 
 /*  end why section  */
 
-/* start our partner */
+/* start our partner section */
 .our-partners {
   position: relative;
   padding-top: var(--main-padding);
@@ -1040,7 +1041,6 @@ ul {
 .word-section {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-
   overflow: hidden;
 }
 
@@ -1138,7 +1138,7 @@ ul {
   position: relative;
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  background-image: url(/imgs/sec3.jpg);
+  background-image: url(../imgs/sec3.jpg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -1422,7 +1422,7 @@ ul {
 
 /* start about landing */
 .about-landing {
-  background-image: url(/imgs/aerial-view-business-team-scaled.jpeg);
+  background-image: url(../imgs/aerial-view-business-team-scaled.jpeg);
   position: relative;
   overflow: hidden;
 }
@@ -1727,7 +1727,7 @@ ul {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
   position: relative;
-  background-image: url(/imgs/3929.jpg);
+  background-image: url(../imgs/3929.jpg);
   background-size: cover;
   background-position: center;
   background-color: var(--main-color);
@@ -1900,7 +1900,7 @@ ul {
 
 /* start services landind */
 .our-services-landing {
-  background-image: url(/imgs/section\ background.jpg);
+  background-image: url(../imgs/section\ background.jpg);
 }
 
 .our-services-landing .container {
@@ -1922,9 +1922,9 @@ ul {
 /* start services cards */
 .services-cards {
   padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
+  padding-bottom: 120px;
   position: relative;
-  background-image: url(/imgs/3929.jpg);
+  background-image: url(../imgs/3929.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1960,7 +1960,7 @@ ul {
   background-color: var(--main-color);
   overflow: hidden;
   border-radius: 40px;
-  border: 2px solid white;
+  border: 3px solid white;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
@@ -2044,38 +2044,58 @@ ul {
 
 /* end services card  */
 
-/*  */
-.services-action-section {
+
+/********************************************** OUR PARTNERS *****************************************/
+
+/* start our partner landing */
+
+.our-partners-landing {
+  background-image: url(../imgs/handshake-close-up-executives.jpg);
+}
+
+/* end our partner landing */
+
+/* start our partner page */
+.our-partner-section {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  position: relative;
 }
 
-.services-action-section .container {
+.our-partner-section .container {
+  color: black;
   text-align: center;
-
+  max-width: 1119px;
 }
 
-.services-action-section .container h4 {
-  font-size: 30px;
-  color: #ff5c5c;
-  font-weight: 700;
-  margin-bottom: 25px;
-
-}
-
-.services-action-section .container h2 {
-  font-size: 45px;
-  color: #111111;
+.our-partner-section .container h1 {
+  font-size: 55px;
   font-weight: 800;
-  margin-bottom: 20px;
+  color: var(--main-color);
 }
 
-.services-action-section .container .number {
-  font-size: 40px;
-  color: #000000;
-  font-weight: 700;
-  display: block;
+.our-partner-section .container .logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
 
-/*  */
+.our-partner-section .container .logos img {
+  max-width: calc(100% / 5 - 80px);
+  margin: 40px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 991px) {
+  .our-partner-section .container .logos img {
+    max-width: calc(100% / 4 - 80px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-partner-section .container .logos img {
+    max-width: calc(100% / 2 - 80px);
+  }
+}
+
+/* end our partner page */
