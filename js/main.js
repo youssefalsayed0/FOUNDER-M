@@ -54,16 +54,16 @@ function logo_carouselInit() {
     autoplayHoverPause: true,
     responsive: {
       0: {
-        items: 3,
+        items: 2,
       },
       576: {
-        items: 4,
+        items: 3,
       },
       768: {
         items: 4,
       },
       992: {
-        items: 4,
+        items: 5,
       }
     }
   })
@@ -234,3 +234,5 @@ Util.osHasReducedMotion = function () {
   }
 }());
 /*** end stack cards **/
+
+
