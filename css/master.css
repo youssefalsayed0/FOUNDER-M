@@ -2176,7 +2176,7 @@ ul {
 
 :root {
   --sg0-space-sm: 2rem;
-  --sg0-space-md: 1.3rem;
+  --sg0-space-md: 0.5rem;
 }
 
 .services-cards .stack-cards {
@@ -2245,7 +2245,7 @@ ul {
 
   .services-cards .stack-cards__item {
     position: sticky;
-    top: -150px;
+    top: -300px;
     border-radius: 40px;
 
   }
